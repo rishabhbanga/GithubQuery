@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rishabh.githubquery.MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="368dp"
+        android:layout_height="624dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.datafrominternet.MainActivity"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <EditText
+            android:id="@+id/et_search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a query"
+            android:textSize="22sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/rv_github_search_results_json"/>
+
+            <TextView
+                android:id="@+id/tv_github_search_results_json"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Click search and your URL will show up here!"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_error_message_display"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="@string/error_message"
+                android:visibility="invisible" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading_indicator"
+                android:layout_height="42dp"
+                android:layout_width="42dp"
+                android:layout_gravity="center"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>
